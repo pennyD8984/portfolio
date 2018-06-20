@@ -1,16 +1,23 @@
 *{
 	box-sizing: border-box;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 html, body{
 	margin: 0;
 	padding: 0;
+	max-width: 100%; 
+	/* Horizontal scroll on IE11 fix*/
+	overflow-x: hidden;
 }
 
 a{
 	min-width: 48px;
 	min-height: 48px;
+}
+
+img{
+	max-width: 100%;
 }
 
 /* Ally */
@@ -40,32 +47,39 @@ a{
 }
 
 /* A class with the same name of the semantic tags has been added. Reason: class selectors resolve quicker than element selectors */
-.header, .main, .article, .aside, .nav, .footer{
+.header, .main, .bio, .aside, .nav, .footer{
 	display: flex;
 }
 
 /* Grid */
-.grid{
+.grid{	
+	display: -ms-grid; 
 	display: grid;
+	-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 	grid-template-columns: repeat(8, 1fr);
+	-ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 	grid-auto-rows: minmax(50px, auto);
 	margin: 0 auto;
-	grid-gap: 10px;
 	grid-template-areas: 
 		"h h h h h h h h"
 		"a a a a a a a a"
 		"c c c c c c c c"
 		"f f f f f f f f";
+	width: 100%;
 }
 
 /* Header */
 .header{
+	-ms-grid-row: 1;
+ 	-ms-grid-column: 1;
+  	-ms-grid-column-span: 8;
 	grid-area: h;
 	border-bottom-right-radius: 15% 10%;
 	border-bottom-left-radius: 50% 60%;
 	border-bottom: 1px solid rgb(26, 174, 210);
 	background-color: white;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .logo{
@@ -76,10 +90,11 @@ a{
 
 .header-text{
 	display: flex;
-	text-decoration: none;
 	flex-wrap: wrap;
+	text-decoration: none;
 	justify-content: space-around;
-	color:  #0bbcef;
+	color:  #0bbcef;	
+	font-family: 'Slabo 27px', serif;
 }
 
 .h-name{
@@ -88,24 +103,38 @@ a{
 
 .h-job{
 	font-size: 1.3em;
-	padding-left: 4.5em;
 }
 
 /* Main */
 .main{
-	grid-area: c; 
+	-ms-grid-row: 2;
+ 	-ms-grid-column: 3;
+ 	-ms-grid-column-span: 8;
+ 	grid-area: c;
+ 	flex-direction: column;
+ 	padding: .5em;
+ 	font-size: 1.2rem;
+ 	text-align: justify;
 }
 
+.bio{
+	display: flex;
+}
 /* Menu */
 .aside{
-	grid-area: a;
+	-ms-grid-row: 2;
+ 	-ms-grid-column: 1;
+ 	-ms-grid-row-span: 1;		/* BEFORE: span = 6. Reason for change: IE bug*/
+ 	-ms-grid-column-span: 2;
+ 	grid-area: a;
+ 	background-color: green;
 }
 
 .nav{
 	flex: 0 0 100%;
 }
 
-.nav-ul{  	
+.nav-ul{
 	display: flex;
 	list-style-type: none;
 	padding: 0;
@@ -113,30 +142,61 @@ a{
 	flex: 0 0 100%;
 }
 
-.nav-item{
-	min-width: 48px;
-	min-height: 48px;
-	flex: auto;
+/* Menu items growing to fit available horizontal space */
+.nav-ul > li{
+	flex: 1;
 }
 
-.nav-item a{
-	display: block;
+.nav-item{
 	text-decoration: none;
+	display: block;
+	border: 1px solid black;
 }
 
 /* Footer */
-.footer{
-	grid-area: f;
-}
+.footer{		
+	-ms-grid-row: 7;
+ 	-ms-grid-column: 1;
+ 	-ms-grid-row-span: 1;
+ 	-ms-grid-column-span: 8;
+ 	grid-area: f;
+ 	-ms-grid-column-align: stretch;
+ }
 
 @media only screen and (min-width : 600px) {
 	.grid{
-    width: 70%;
-    margin: auto;
-    font-size: 1.5em;
-	grid-template-areas: 
-		"h h h h h h h h"
-		"a a c c c c c c"
-		"a a c c c c c c"
-		"f f f f f f f f";  	
-  	}
+		margin: auto;
+		width: 70%;
+		grid-template-areas: 
+			"h h h h h h h h"
+			"a a c c c c c c"
+			"a a c c c c c c"
+			"f f f f f f f f";  	
+	  	}
+
+		/*	h1 is used to make the entire banner clickable but it overflow the container in IE: FIXED*/
+		.header h1{
+			width: 100%;
+			height: 40%;
+		}
+
+		.header-text{
+			justify-content: flex-start;
+			padding-left: 3.5em;
+		}
+
+		.h-job{
+			padding-left: 0;
+		}
+
+		.nav-ul{
+			flex-direction: column;
+
+		}
+
+		.main{
+			justify-content: center;
+		}
+}
+
+
