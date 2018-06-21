@@ -1,7 +1,4 @@
-*{
-	box-sizing: border-box;
-	font-size: 1rem;
-}
+
 
 /* Set h1 and h2 font size because because they are wrapped in a div  */
 h1{
@@ -55,7 +52,7 @@ img{
 }
 
 /* A class with the same name of the semantic tags has been added. Reason: class selectors resolve quicker than element selectors */
-.header, .main, .bio, .aside, .nav, .footer{
+.header, .main, .bio, .aside, .nav, .footer, .about, .serv, .demo, .{
 	display: flex;
 }
 
@@ -134,11 +131,8 @@ img{
  	text-align: justify;
 }
 
-.demo{
+#demo{
 	margin: 0 auto;
-}
-
-.demo{
 	display: -ms-grid;
 	display: grid;
 	-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -154,7 +148,7 @@ img{
 }
 
 /* Gallery */
-.demo div{
+#demo div{
 	border: 1px solid black;
 	padding: 30px;
 }
