@@ -3,6 +3,15 @@
 	font-size: 1rem;
 }
 
+/* Set h1 and h2 font size because because they are wrapped in a div  */
+h1{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 1.5em;
+}
+
 html, body{
 	margin: 0;
 	padding: 0;
@@ -80,33 +89,38 @@ img{
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 1.5em;
-}
 
-.logo{
-	width: 20%;
-	height: 20%;
-	margin-left: .3em;
-	margin-top: 1em;
 }
 
 .header-text{
 	display: flex;
 	flex-wrap: wrap;
 	text-decoration: none;
-	justify-content: space-around;
+	justify-content: space-between;
 	color:  #0bbcef;
 	font-family: 'Slabo 27px', serif;
+	flex: 1;
+	padding-right: 1.5em;
+	margin-top: -.3em;
 }
 
-.h-name{
-	font-size: 2em;
+.logo{
+	display: flex;
+	padding-left: 1.5em;
+	padding-top: 1em;
+}
+
+.logo img{
+	width: 75%;
+	height: 75%;
 }
 
 .h-job{
-	font-size: 1.3em;
-	margin-top: -1em;
-	margin-left: 6em;
+	display: flex;
+	margin-left: auto;
+	margin-top: -3.5em;
 }
+
 
 /* Main */
 .main{
@@ -135,6 +149,8 @@ img{
 	min-width: 350px;
 	grid-gap: 20px;
 	grid-row-gap: 5em;
+	margin: 0;
+	padding: 0;
 }
 
 /* Gallery */
@@ -201,29 +217,37 @@ img{
  }
 
 @media only screen and (min-width : 600px) {
+
 	.grid{
 		margin: auto;
-		width: 70%;
+		width: 60%;
 		grid-template-areas:
 			"h h h h h h h h"
-			"a a c c c c c c"
-			"a a c c c c c c"
+			"a a a a a a a a"
+			"c c c c c c c c"
 			"f f f f f f f f";
 	  	}
 
-		/*	h1 is used to make the entire banner clickable but it overflow the container in IE: FIXED*/
+		.header{
+			justify-content: center;
+			align-items: center;
+		}
 		.header h1{
-			width: 100%;
-			height: 40%;
+			display: flex
+		}
+
+		.logo {
+			width: 14%;
+
 		}
 
 		.header-text{
-			justify-content: flex-start;
-			padding-left: 3.5em;
+
 		}
 
 		.h-job{
-			padding-left: 0;
+			margin: 0;
+			padding: 0;
 		}
 
 		.nav-ul{
