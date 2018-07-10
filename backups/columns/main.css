@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	box-sizing: border-box;
+	background-color:#0066cc;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	color: white;
+}
+
+html, body, .mainContent{
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+
+img{
+	max-width:100%;
+	min-width: 48px;
+}
+
+.name, a:link{
+	text-decoration: none!important;
+	font-family: 'Lobster', cursive;
+	color: white;
+	font-size: 2rem;
+}
+
+.banner{
+	display: flex;
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	border-bottom-left-radius: 16% 10%;
+    border-bottom-right-radius: 80% 80%;
+	background-color: #0099cc;
+}
+
+.name{
+	margin-right: auto;
+	margin-left: .4em;
+	margin-top: .1em;
+}
+
+.mainContent{
+	grid-column: 1 / -1;
+	grid-row: 2 / 13;
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+.imgGallery{
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+	flex: auto;
+	flex-grow: 1;
+	max-width: 45vw;
+	margin-top: 4vw;
+	margin-left: auto;
+}
+
+
+.bio{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	max-width: 50vw;
+	margin-right: auto;
+	padding-left: 2vw;
+}
+
+.bioTitle{
+	position:relative;
+	top: -5vw;
+	margin-left: auto;
+	font-size: 1.5rem;
+	text-decoration: underline;
+	padding-right: 1vw;
+}
+
+.bioParagraph{
+	position: relative;
+	top: -3vw;
+}
+
+
+.footer{
+	grid-column: 1 / -1;
+	grid-row: -1 / -1;
+}
