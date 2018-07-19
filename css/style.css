@@ -1,6 +1,7 @@
 /*	
  * 	TODO
  *	Implement a better gallery: on click the image will enlarge 
+ *	Style gallery headers
  */
 
 
@@ -19,6 +20,7 @@ html, body{
 	max-width: 100%;
 	/* Horizontal scroll on IE11 fix*/
 	overflow-x: hidden;
+	text-overflow: ellipsis;
 }
 h1 {
     font-size: 2.5em;
@@ -81,7 +83,7 @@ img{
     flex-wrap: wrap;
 }
 
-.header-text{
+.header-text{    
 	display: flex;
 	flex-wrap: wrap;
 	text-decoration: none;
@@ -111,9 +113,10 @@ img{
 /* Articles */
 article{
 	padding: 0.5em;
-	line-height: 1.5;
+	line-height: 1.6;
 	letter-spacing: 1px;    
 	border-bottom: 1px groove #0bbcef;
+
 }
 
 article p::first-letter { 
@@ -121,15 +124,20 @@ article p::first-letter {
 	color: #0a9ec9;
 	font-family: "Comic sans", cursive;  
 	font-weight: bold;
-  	line-height: .1em;
+  	line-height: 0.1em;
 }
 
 article p:first-child{
     font-style: italic;	
 }
 
-.p-title{    
+.p-title{
+	text-align: center;
 	margin: 0.3em;
+	font-family: "Ubuntu", sans-serif;
+	font-style: italic;
+	font-weight: bold;  
+	text-shadow: 2px 2px 2px #aaa;
 }
 
 /* Main */
@@ -164,19 +172,33 @@ figure img{
 	flex-wrap: wrap;
 	flex: auto;
 	align-items: flex-start;
+	-webkit-box-shadow: 2px 3px 11px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 3px 11px -1px rgba(0,0,0,0.75);
+	box-shadow: 2px 3px 11px -1px rgba(0,0,0,0.75);
 }
 
 .demo-content img{		
 	width: 98%;
-	-webkit-box-shadow: 2px 3px 11px -1px rgba(0,0,0,0.75);
-	-moz-box-shadow: 2px 3px 11px -1px rgba(0,0,0,0.75);
-	box-shadow: 2px 3px 11px -1px rgba(0,0,0,0.75);
 }
 
 .demo-content h3, p{		
 	width: 100%;
 }
 
+.demo-content h3{	
+	color: #0a9ec9;	
+	text-decoration: underline;
+}
+
+.demo-content h3:hover{	
+	background-color: #0DC8FF; background-image: -webkit-gradient(linear, left top, left bottom, from(#0DC8FF), to(#0A9EC9));
+	background-image: -webkit-linear-gradient(top, #0DC8FF, #0A9EC9);
+    background-image: -moz-linear-gradient(top, #0DC8FF, #0A9EC9);
+	background-image: -ms-linear-gradient(top, #0DC8FF, #0A9EC9);
+	background-image: -o-linear-gradient(top, #0DC8FF, #0A9EC9);
+	background-image: linear-gradient(to bottom, #0DC8FF, #0A9EC9);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#0DC8FF, endColorstr=#0A9EC9);
+	color: #fff;
+}
 /* Menu */
 
 .nav{
@@ -313,7 +335,8 @@ footer{
 	}
 
 	.h-text h3{
-		margin: 1em;
+		margin-top: 3em;
+		margin-left: 0.5em;
 	}
 	
 	.logo img{
