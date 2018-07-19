@@ -226,6 +226,11 @@ figure img{
 	background-image: linear-gradient(to bottom, #00a8d9, #0DC8FF);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#00a8d9, endColorstr=#0DC8FF);
 }
 
+footer{
+	text-align: center;
+	padding: 0.5em;
+	line-height: 1.5;
+}
 @media screen and (min-width: 400px) {
 
 	.demo-content{
