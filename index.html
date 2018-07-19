@@ -2,61 +2,89 @@
 <html lang="en">
 	<head>
 		<title>Valentina Papa</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" type="text/css" href=./css/style.css>
 	</head>
 	<body>
 		<!--Skip Navigation Link -->
 		<div class="skip"><a href="#main">Skip to Main Content</a></div>
-		<div class="grid">
-			<!-- Main placed before header for SEO purposes and added "section role" for IE-->
-			<main class="main">
-				<article id="about" class="article">
-					<h2 class="p-title">About me</h2>
-					<p class="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit nibh at consequat elementum. Proin condimentum tristique pretium. Curabitur non posuere eros. Vivamus egestas mauris et porttitor rutrum. Nam dictum facilisis tellus a ultricies. Sed porttitor tortor erat, vitae pulvinar metus vulputate euismod. Mauris rutrum leo at aliquet sagittis. Morbi facilisis suscipit nulla accumsan consectetur.
-					Donec vulputate erat vitae laoreet auctor. Ut sit amet leo ac urna faucibus tempus fermentum eu elit. Phasellus convallis pellentesque varius. In pulvinar elementum nisi quis fringilla. In a enim magna. Donec dolor risus, sagittis sed felis nec, feugiat imperdiet lorem. Nam quis fringilla nunc. Curabitur leo mauris, ullamcorper et volutpat a, consequat eu metus. Sed ut tempor nunc. Cras nec metus non enim congue scelerisque. Vestibulum non elit pretium, posuere risus sed, convallis purus.
-					</p>
-				</article>
-				<article id="serv">
-					<h2 class="p-title">What do I offer?</h2>
-					<p class="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit nibh at consequat elementum. Proin condimentum tristique pretium. Curabitur non posuere eros. Vivamus egestas mauris et porttitor rutrum. Nam dictum facilisis tellus a ultricies. Sed porttitor tortor erat, vitae pulvinar metus vulputate euismod. Mauris rutrum leo at aliquet sagittis. Morbi facilisis suscipit nulla accumsan consectetur.
-					</p>
-					</article>
-					<div class="demo">
-						<div class="demo-content">
-							<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="memo game">
-							<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="memo game">
-							<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="memo game">
-							<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="memo game">
-					</div>
-					</div>
-				<article id="contacts" class="article">
-					<h1 class="p-title">Contacts</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit nibh at consequat elementum. Proin condimentum tristique pretium. Curabitur non posuere eros. Vivamus egestas mauris et porttitor rutrum. Nam dictum facilisis tellus a ultricies. Sed porttitor tortor erat, vitae pulvinar metus vulputate euismod. Mauris rutrum leo at aliquet sagittis. Morbi facilisis suscipit nulla accumsan consectetur.
-
-					Donec vulputate erat vitae laoreet auctor. Ut sit amet leo ac urna faucibus tempus fermentum eu elit. Phasellus convallis pellentesque varius. In pulvinar elementum nisi quis fringilla. In a enim magna. Donec dolor risus, sagittis sed felis nec, feugiat imperdiet lorem. Nam quis fringilla nunc. Curabitur leo mauris, ullamcorper et volutpat a, consequat eu metus. Sed ut tempor nunc. Cras nec metus non enim congue scelerisque. Vestibulum non elit pretium, posuere risus sed, convallis purus.
-					</p>
-				</article>
-			</main>
+		<div class="wrapper">
 			<header class="header">
-					<a href="index.html" class="header-text">
-						<!-- img and h1 wrapped in <div> for better placement and to avoid block element issues -->
-						<div class="logo"><img src="./img/logo.png" alt="Personal logo" title="link to homepage"></div>
-						<div class="h-name"><h1>Valentina Papa</h1></div>
-						<div class="h-job"><h2>Front-End-Web-Developer</h2></div>
-					</a>
+				<a href="index.html" class="header-text">
+					<!-- img and h1 wrapped in <div> for better placement and to avoid block element issues -->
+					<div class="logo"><img src="./img/logo.png" alt="Personal logo" title="link to homepage"></div>
+					<div class="h-text">					
+						<h1>Valentina Papa</h1>
+						<h3>Front-End-Web-Developer</h3>
+					</div>
+				</a>
 			</header>
-			<aside class="aside">
-				<nav class="nav">
-					<a href="#about" class="nav-item" title="About me">About</a>
-					<a href="#serv" class="nav-item" title="Services">Services</a>
-					<a href="#demo" class="nav-item" title="Demo">Demo</a>
-					<a href="#contacts" class="nav-item" title="Contacts">Contacts</a>
-				</nav>
-			</aside>
-			<footer class="footer">Footer</footer>
+			<main class="main">
+				<section class="stock">
+					<figure>  
+						<img src="img/cover.jpeg" alt="Website cover: desk with PC">
+					</figure>
+				</section>
+				<aside class="aside">
+					<nav class="nav">
+						<ul class="nav-ul">
+							<li><a href="#about" class="nav-item" title="About me">About</a></li>
+							<li><a href="#serv" class="nav-item" title="Services">Services</a></li>
+							<li><a href="#demo" class="nav-item" title="Demo">Demo</a></li>
+							<li><a href="#contacts" class="nav-item" title="Contacts">Contacts</a></li>
+						</ul>
+					</nav>
+				</aside>
+					<article id="about" class="article">
+						<h2 class="p-title">About me</h2>
+						<p class="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit nibh at consequat elementum. Proin condimentum tristique pretium. Curabitur non posuere eros. Vivamus egestas mauris et porttitor rutrum. Nam dictum facilisis tellus a ultricies. Sed porttitor tortor erat, vitae pulvinar metus vulputate euismod. Mauris rutrum leo at aliquet sagittis. Morbi facilisis suscipit nulla accumsan consectetur.
+						Donec vulputate erat vitae laoreet auctor. Ut sit amet leo ac urna faucibus tempus fermentum eu elit. Phasellus convallis pellentesque varius. In pulvinar elementum nisi quis fringilla. In a enim magna. Donec dolor risus, sagittis sed felis nec, feugiat imperdiet lorem. Nam quis fringilla nunc. Curabitur leo mauris, ullamcorper et volutpat a, consequat eu metus. Sed ut tempor nunc. Cras nec metus non enim congue scelerisque. Vestibulum non elit pretium, posuere risus sed, convallis purus.
+						</p>
+					</article>
+					<article id="serv">
+						<h2 class="p-title">What do I offer?</h2>
+						<p class="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit nibh at consequat elementum. Proin condimentum tristique pretium. Curabitur non posuere eros. Vivamus egestas mauris et porttitor rutrum. Nam dictum facilisis tellus a ultricies. Sed porttitor tortor erat, vitae pulvinar metus vulputate euismod. Mauris rutrum leo at aliquet sagittis. Morbi facilisis suscipit nulla accumsan consectetur.
+						</p>
+						</article>
+						<div class="demo" id="demo">
+							<div class="demo-content">
+								<img src="img/owl.png" alt="memo game project photo">
+								<h3>Project 1:</h3>
+								<p>Create a personal portfolio</p>
+							</div>
+							<div class="demo-content">
+								<img src="img/pandaren.jpg" alt="memo game">
+								<h3>Project 2:</h3>
+								<p>Create a memory game</p>
+							</div>
+							<div class="demo-content">
+								<img src="img/batman.jpg" alt="memo game">
+								<h3>Project 3:</h3>
+								<p>Test with Jasmine</p>
+							</div>
+							<div class="demo-content">
+								<img src="img/resto.PNG" alt="project: restaurant review site">
+								<h3>Project 5:</h3>
+								<p>Transform a website from static to dynamic</p>
+							</div>
+							<div class="demo-content" id="last">
+								<img src="img/frogger.jpg" alt="memo game">
+								<h3>Project 6:</h3>
+								<p>Create an arcade game clone</p>
+							</div>
+						</div>
+					<article id="contacts" class="article">
+						<h1 class="p-title">Contacts</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit nibh at consequat elementum. Proin condimentum tristique pretium. Curabitur non posuere eros. Vivamus egestas mauris et porttitor rutrum. Nam dictum facilisis tellus a ultricies. Sed porttitor tortor erat, vitae pulvinar metus vulputate euismod. Mauris rutrum leo at aliquet sagittis. Morbi facilisis suscipit nulla accumsan consectetur.
+
+						Donec vulputate erat vitae laoreet auctor. Ut sit amet leo ac urna faucibus tempus fermentum eu elit. Phasellus convallis pellentesque varius. In pulvinar elementum nisi quis fringilla. In a enim magna. Donec dolor risus, sagittis sed felis nec, feugiat imperdiet lorem. Nam quis fringilla nunc. Curabitur leo mauris, ullamcorper et volutpat a, consequat eu metus. Sed ut tempor nunc. Cras nec metus non enim congue scelerisque. Vestibulum non elit pretium, posuere risus sed, convallis purus.
+						</p>
+					</article>
+				</main>
+				<footer class="footer">Footer</footer>
+			</div>
 		</div>
 	</body>
 </html>
